@@ -1,0 +1,9 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+.fa-sm {
+    font-size: 1.875em;
+    margin-top: 12px;
+}
