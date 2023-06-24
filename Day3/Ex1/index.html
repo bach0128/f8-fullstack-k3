@@ -12,12 +12,25 @@
         margin-top: 16px;
         margin-right: 10px;
       }
+      #heading::after {
+        border-bottom: 4px solid #d9a923;
+        content: "";
+        width:50px;
+        height: 6px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 2px;
+      }
     </style>
   </head>
   <body>
+    <a href="#heading" id="heading" style="text-decoration: none;">
+      <h1 style="margin-bottom: 2px; color: #000;"> CONTACT US</h1>
+    </a>
     <div class="contact__form flex">
       <div class="contact__info" style="width: 40%">
-        <h1>Contact Info</h1>
+          <h2>Contact Info</h2>
         <div class="info__us" style="color: gray">
           <div class="info__us--address flex">
             <i class="fa-solid fa-location-dot mt-16"> </i>

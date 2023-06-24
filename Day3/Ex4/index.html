@@ -5,39 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .nav-bar {
+      .item__nav--css {
         display: flex;
-        padding: 4px 10px;
+        padding: 0 10px;
         color: rgb(194, 115, 18);
+        text-decoration: none;
+      }
+      .navbar__address {
+        display: flex;
+        border: 2px solid rgb(194, 115, 18);
+        max-width: 460px;
+        line-height: 16px;
+        margin: 0 16px;
+      }
+      .item__checked {
+        background-color: rgb(194, 115, 18);
+        color: #fff;
+        text-decoration: none;
+      }
+      .nav__bar--item {
+        padding: 0 8px;
       }
     </style>
   </head>
   <body>
-    <div class="navbar__address" style="display: flex">
-      <a href="#UAE" class="nav__bar">
-        <div
-          class="nav__bar-item item__checked"
-          style="
-            background-color: rgb(194, 115, 18);
-            color: #fff;
-            text-decoration: none;
-          "
-        >
+    <div class="navbar__address">
+      <div class="nav__bar--item item__checked">
+        <a href="#UAE" style="text-decoration: none; color: #fff">
+          <!-- class="item__nav--css"  -->
           <p>United Arab Emirates</p>
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <a href="#London" class="nav-bar">
-        <p>London</p>
-      </a>
+      <div class="nav__bar--item">
+        <a href="#London" class="item__nav--css">
+          <p>London</p>
+        </a>
+      </div>
 
-      <a href="#Singapore" class="nav-bar">
-        <p>Singapore</p>
-      </a>
+      <div class="nav__bar--item">
+        <a href="#Singapore" class="item__nav--css">
+          <p>Singapore</p>
+        </a>
+      </div>
 
-      <a href="#Hong Kong" class="nav-bar">
-        <p>Hong Kong</p>
-      </a>
+      <div class="nav__bar--item">
+        <a href="#Hong Kong" class="item__nav--css">
+          <p>Hong Kong</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="info__company" style="display: flex; margin: 32px 16px">
+      <div
+        class="company__contact"
+        style="width: 30%; background-color: rgb(200, 192, 192)"
+      >
+        <h2>ADS SECURITIES L.L.C</h2>
+        <span>
+          <p>8th floor HG Tower</p>
+          <p>Manta Road, PO Box 99823</p>
+          <p>Abu Dhabi, United Arab Emirates</p>
+        </span>
+
+        <span>
+          <p>Tel: +971 23345 2044</p>
+          <p>Fax: +971 8345 71641</p>
+          <p>
+            Email <u style="color: rgb(199, 153, 93)">ads@sercurities.com</u>
+          </p>
+        </span>
+      </div>
+      <div class="img__address">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.354177188565!2d105.78624284515224!3d21.01850993347533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4ed17b6271%3A0xbc5ecad0a98a50c4!2sJoily%20Coffee!5e0!3m2!1svi!2s!4v1687603348605!5m2!1svi!2s"
+          width="800"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   </body>
 </html>
