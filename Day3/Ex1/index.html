@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex {
+        display: flex;
+      }
+      .mt-16 {
+        margin-top: 16px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact__form flex">
+      <div class="contact__info" style="width: 40%">
+        <h1>Contact Info</h1>
+        <div class="info__us" style="color: gray">
+          <div class="info__us--address flex">
+            <i class="fa-solid fa-location-dot mt-16"> </i>
+            <p>168 West Lake Street, India</p>
+          </div>
+          <div class="infor__us--email flex">
+            <i class="fa-solid fa-envelope mt-16"></i>
+            <p>Info@company.com</p>
+          </div>
+          <div class="infor__us--phonenumber flex">
+            <i class="fa-solid fa-phone mt-16"></i>
+            <p>+84 88 888 888</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__form--submit" style="width: 60%">
+        <div class="submit__form">
+          <h2>Having Any Query! Or Book an appoinment</h2>
+          <div class="user__name w-100">
+            <input
+              type="text"
+              class="name"
+              placeholder="Your Name"
+              style="width: 90%; margin: 4px 0"
+            />
+          </div>
+          <div class="user__email w-100">
+            <input
+              type="email"
+              class="email"
+              placeholder="Your Email"
+              style="width: 90%; margin: 4px 0"
+            />
+          </div>
+          <div class="user__subject w-100">
+            <input
+              type="text"
+              class="subject"
+              placeholder="Subject"
+              style="width: 90%; margin: 4px 0"
+            />
+          </div>
+          <div class="user__message">
+            <textarea
+              name="message"
+              id=""
+              cols="88"
+              rows="8"
+              placeholder="message"
+              style="margin: 4px 0"
+            ></textarea>
+          </div>
+
+          <div class="submit__button" >
+            <button style="background-color: rgb(23, 139, 91); border: none; color: aliceblue; padding: 8px; cursor: pointer;">Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/1de64d9d60.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

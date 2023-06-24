@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="formAccessManager">
+      <div class="Username" style="padding: 10px; display: flex">
+        <div class="setWidth-label" style="width: 100px">
+          <label for="name">Username: </label>
+        </div>
+        <input type="text" id="name" style="margin-left: 20px" required />
+      </div>
+
+      <div class="Password" style="padding: 10px; display: flex">
+        <div class="setWidth-label" style="width: 100px">
+          <label for="password">Password: </label>
+        </div>
+        <input
+          type="password"
+          id="password"
+          style="margin-left: 20px"
+          required
+        />
+      </div>
+
+      <div class="City" style="padding: 10px; display: flex">
+        <div class="setWidth-label" style="width: 100px">
+          <label for="City">City of Employment: </label>
+        </div>
+        <input
+          type="text"
+          id="City"
+          style="margin-left: 20px; height: 20px"
+          required
+        />
+      </div>
+
+      <div class="server" style="padding: 10px; display: flex">
+        <div class="setWidth-label" style="width: 120px">
+          <label for="server">Web server:</label>
+        </div>
+        <button>
+          -Chosse a server-
+          <select name="server" id="server" required>
+            <option value="1">LA</option>
+            <option value="2">NA</option>
+            <option value="3">SA</option>
+            <option value="4">ASIA</option>
+            <option value="5">NIGGA</option>
+          </select>
+        </button>
+      </div>
+
+      <div class="role" style="padding: 10px; display: flex">
+        <div class="setWidth-label" style="width: 100px">
+          <label>Please specify your role: </label>
+        </div>
+        <div class="select-role" style="display: flex; flex-direction: column">
+          <label>
+            <input
+              type="radio"
+              name="role"
+              value="1"
+              style="margin-left: 20px"
+              required
+            />
+            Mail
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="role"
+              value="2"
+              style="margin-left: 20px"
+              required
+            />
+            Payroll
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="role"
+              value="3"
+              style="margin-left: 20px"
+              required
+            />
+            Self-service
+          </label>
+        </div>
+      </div>
+
+      <div class="sign-on" style="padding: 10px; display: flex">
+        <div class="setWidth-label" style="width: 100px">
+          <label>Single Sign-on to the following: </label>
+        </div>
+        <div
+          class="select-sign-on"
+          style="display: flex; flex-direction: column"
+        >
+          <label>
+            <input
+              type="checkbox"
+              name="sign-on"
+              value="3"
+              style="margin-left: 20px"
+              required
+            />
+            Admin
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="sign-on"
+              value="1"
+              style="margin-left: 20px"
+              required
+            />
+            Engineer
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="sign-on"
+              value="2"
+              style="margin-left: 20px"
+              required
+            />
+            Manager
+          </label>
+        </div>
+      </div>
+
+      <div
+        class="submit"
+        style="display: flex; align-items: center; margin-left: 10%"
+      >
+        <div class="submit__button"></div>
+        <button class="login-button" style="margin: 10px; cursor: pointer">
+          Login
+        </button>
+        <button class="reset-button" style="margin: 10px; cursor: pointer">
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
