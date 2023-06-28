@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-Subscribe</title>
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .form__subscribe {
+        width: 100%;
+        height: 170px;
+        background-color: #4d5465;
+        border-radius: 2px;
+        box-sizing: border-box;
+        padding-left: 24px;
+      }
+
+      header {
+        padding-top: 4px;
+        margin-top: 4px;
+      }
+
+      h2 {
+        color: #fff;
+      }
+
+      span {
+        color: #e17e17;
+      }
+
+      p {
+        color: #fff;
+      }
+
+      .form__subscribe-email {
+        width: 200px;
+        height: 28px;
+        line-height: 16px;
+        padding: 2px 8px;
+        border-color: #fff;
+        border-radius: 2px;
+      }
+
+      .form__subscribe-submit {
+        width: 180px;
+        height: 36px;
+        border-color: #fff;
+        border-radius: 2px;
+        background-color: #edcc26;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .form__subscribe:hover .form__subscribe-email {
+        background-color: #ddd;
+      }
+
+      .form__subscribe:hover .form__subscribe-email::placeholder {
+        color: #e17e17;
+      }
+
+      .form__subscribe:hover .form__subscribe-submit {
+        background-color: #e17e17;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form__subscribe">
+      <header>
+        <h2><span> Earn income </span> with your CSS skills</h2>
+      </header>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam
+        fugiat culpa minus mollitia sed praesentium!
+      </p>
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          class="form__subscribe-email"
+          required
+        />
+        <button class="form__subscribe-submit">Send Me Opportunities</button>
+      </div>
+    </div>
+  </body>
+</html>

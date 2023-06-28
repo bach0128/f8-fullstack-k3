@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>Reservation</title>
+    <style>
+      * {
+        font-family: "Alfa Slab One", cursive;
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+      .reservation {
+        align-items: center;
+        text-align: center;
+      }
+
+      .reservation span {
+        color: rgb(79, 26, 26);
+        font-size: 24px;
+      }
+
+      .reservation h2 {
+        color: rgb(79, 26, 26);
+        font-size: 60px;
+        margin: 20px 0;
+      }
+
+      .infor-booking {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      .list__infor-item {
+        width: 50%;
+      }
+
+      .list__infor-item input {
+        width: 90%;
+        height: 30px;
+        margin: 8px;
+        padding: 8px 12px 8px;
+        line-height: 16px;
+        font-size: 16px;
+        border: 1px solid;
+        border-color: #ddd;
+      }
+
+      .list__infor-item input::placeholder {
+        color: black;
+      }
+
+      .list__infor-item button {
+        color: #fff;
+        background-color: rgb(175, 29, 29);
+        width: calc(90% + 22px);
+        height: 48px;
+        margin: 8px 0;
+        border-color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 1px solid transparent(0, 0, 0, 0.08);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reservation">
+      <span><p>RESERVATION</p></span>
+      <h2>Book your table</h2>
+      <div class="infor-booking">
+        <div class="list__infor-item">
+          <input type="text" name="infor-booking" placeholder="NAME" required />
+        </div>
+        <div class="list__infor-item">
+          <input
+            type="email"
+            name="infor-booking"
+            placeholder="EMAIL"
+            required
+          />
+        </div>
+        <div class="list__infor-item">
+          <input type="date" name="infor-booking" placeholder="DATE" required />
+        </div>
+        <div class="list__infor-item">
+          <input
+            type="number"
+            min="8"
+            max="23"
+            name="infor-booking"
+            placeholder="TIME"
+            required
+          />
+        </div>
+        <div class="list__infor-item">
+          <input
+            type="number"
+            name="infor-booking"
+            placeholder="PEOPLE"
+            min="1"
+            max="30"
+            required
+          />
+        </div>
+        <div class="list__infor-item">
+          <button>Find A Table</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
