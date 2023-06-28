@@ -8,9 +8,9 @@
   </head>
   <body>
     <ul>
-      <li><a href="/Day4/Ex1/index.html">Ex1</a></li>
-      <li><a href="/Day4/Ex2/index.html">Ex2</a></li>
-      <li><a href="/Day4/Ex3/index.html">Ex3</a></li>
+      <li><a href="https://github.com/bach0128/f8-fullstack-k3/blob/main/Day4/Ex1/index.html">Ex1</a></li>
+      <li><a href="https://github.com/bach0128/f8-fullstack-k3/blob/main/Day4/Ex2/index.html">Ex2</a></li>
+      <li><a href="https://github.com/bach0128/f8-fullstack-k3/blob/main/Day4/Ex3/index.html">Ex3</a></li>
     </ul>
   </body>
 </html>
