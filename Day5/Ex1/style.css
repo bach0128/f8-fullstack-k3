@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lobster&display=swap');
+
+* {
+    font-family: 'Lobster', cursive;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    position: relative;
+}
+
+h2 {
+    font-style: 20px;
+    font-weight: 400;
+    font-family: 'Lobster', cursive;
+    margin: 20px 40px;
+}
+
+p {
+    color: #a4a2a2;
+    margin: 10px 40px;
+}
+
+p span {
+    color: rgb(236, 41, 41);
+}
+
+.guest-desc {
+    display: flex;
+    height: 50px;
+    margin: 10px 40px;
+    width: 400px;
+    position: relative;
+}
+
+.guest-desc.not-input {
+    border: 2px #bfbfbf solid;
+    height: 52px;
+    position: relative;
+}
+
+.guest-desc label img {
+    height:  50px;
+}
+
+input {
+    width: 400px;
+    border: none;
+    padding: 0 12px;
+    border: 2px #bfbfbf solid;
+
+}
+
+.star::after {
+    content: "*";
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 14px;
+    font-size: 20px;
+    color: #57535393;
+    /* display: none; */
+  }
+
+.close::after {
+    content: "x";
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 14px;
+    font-size: 20px;
+    color: #57535393;
+    transform: rotate(-45def);
+    font-size: 14px;
+    cursor: pointer;    
+    display: none;
+  }
+
+.input-note {
+    background-color: #333;
+    color: #fff;
+    width: 150px;
+    font-size: 12px;
+    height: 36px;
+    margin: 0;
+    text-align: center;
+    line-height: 36px;
+    margin-top: -50px;
+    margin-left: 20px;
+    position: absolute;
+    display: none;
+}
+
+.input-note::after {
+    content: "";
+    position: absolute;
+    border-width: 20px;
+    border-color: #333 transparent transparent transparent;
+    border-style: solid;
+    margin-top: 24px;
+    margin-left: -100px;
+}
+
+.sort-img {
+    position: absolute;
+    margin-left: -50px;
+    padding: 10px;
+}
+
+.submit {
+    width: 450px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.submit>#send-message {
+    width: 20px;
+    margin-left: 40px;
+}
+
+.submit>span {
+    color: #a4a2a2;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+}
+
+.submit .button button {
+    justify-content: center;
+    align-items: right;
+    margin-left: 82px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.form .guest-desc:hover label:first-child {
+    background-color: #000;
+}
+
+.form .guest-desc:hover .guest-desc {
+    border: none;
+}
+
+input:active,input:focus ~ .input-note {
+    display: block;
+}
+
+input:focus ~ .star::after {
+    display: none;
+}
+
+input:focus ~ .close::after {
+    display: block;
+}
+
+textarea:focus ~ .star::after {
+    display: none;
+}
+
+textarea:focus ~ .close::after {
+    display: block;
+}
+
+.form .guest-desc:hover textarea,
+.form .guest-desc:hover select,
+.form .guest-desc:hover input {
+  border: 2px solid #000;
+}
+
+.form select,
+.form textarea,
+.form input:not([type="checkbox"]) {
+  padding: 12px 12px;
+  flex: 1;
+}
+
+
+
+
+

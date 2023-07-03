@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ex1</title>
+  </head>
+  <body></body>
+  <section class="guest__infor">
+    <h2>Hey there</h2>
+    <p>
+      <span> We'd like to hear from you.</span> Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Illum repudiandae, nulla cumque impedit
+      possimus laudantium.
+    </p>
+    <div class="form"> 
+      <div class="guest-desc"> 
+        <label for="name">
+          <img src="img/user-name.png" alt="">
+        </label>
+        <input type="text" placeholder="Your name" id="name" class="name" required>
+        <span class="input-note">Enter your name</span>
+        <span class="star"></span>
+        <span class="close"></span>
+      </div>
+
+      <div class="guest-desc"> 
+        <label for="email">
+          <img src="img/email.png" alt="email">
+        </label>
+        <input type="email" placeholder="your@domain.com" id="email" class="email" required>
+        <span class="input-note">Enter your email</span>
+        <span class="star"></span>
+        <span class="close"></span>
+
+      </div>
+
+      <div class="guest-desc"> 
+        <label for="number">
+          <img src="img/phone.png" alt="phone">
+        </label>
+        <input type="number" placeholder="+44 00 123" id="number" min="0" max="9" class="number" required>
+        <span class="input-note">Enter your phone-number</span>
+      </div>
+
+      <div class="guest-desc not-input"> 
+        <label for="sub-img">
+          <img src="img/subject.png" alt="subject" id="sub-img">
+        </label>
+        <select name="subject" id="subject" style="border: none;width: 100%; appearance: none;"   class="subject">
+          <option value="0" hidden></option>
+          <option value="1">Student</option>
+          <option value="2">University</option>
+          <option value="3">Word for company</option>
+          <option value="4">None</option>
+        </select>
+          <label for="subject">
+            <img src="img/sort.png" alt="" class="sort-img">
+          </label>
+        
+      </div>
+    
+      <div class="guest-desc not-input"> 
+        <label for="message">
+          <img src="img/messenger.png" alt="meesage">
+        </label>
+        <textarea type="text" placeholder="Message" id="message" cols="50" rows="30" style="border: none;" class="meesage" required>
+          </textarea>
+        <span class="star"></span>
+        <span class="close"></span>
+      </div>
+
+      <div class="submit">
+        <input
+            type="checkbox"
+            name="send-message"
+            id="send-message"
+        />
+          <span> Send me a copy of this message </span>
+          <div class="button">
+            <button type="button">SEND</button>
+          </div>
+    </div>
+
+    </div>
+
+  </section>
+  
+  
+
+    <script
+      src="https://kit.fontawesome.com/1de64d9d60.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+    background-color: rgb(240, 109, 21);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    position: relative;
+}
+
+.header p {
+    color: #fff;
+    margin: 0 20px;
+}
+
+input[type="checkbox"], .minus {
+    display: none;
+}
+
+.plus, .minus {
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+label {
+    width: 40px;
+    height: 30px;
+    color: #000;
+    z-index: 10;
+}
+
+.content {
+    margin: 12px 20px 20px 12px;
+    display: none;
+}
+
+.para-1:checked ~ .content,
+.para-2:checked ~ .content,
+.para-3:checked ~ .content {
+    display: block;
+}
+
+.para-1:checked ~ .plus,
+.para-2:checked ~ .plus,
+.para-3:checked ~ .plus {
+    display: none;
+}
+
+.para-1:checked ~ .minus,
+.para-2:checked ~ .minus,
+.para-3:checked ~ .minus {
+    display: block;
+}
