@@ -1,0 +1,176 @@
+
+@font-face {
+    font-family: "Open sans", sans-serif;
+    src: url("fonts/OpenSans_Condensed-Light.ttf");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "Open sans", sans-serif;
+    src: url("fonts/OpenSans_Condensed-Bold.ttf");
+    font-weight: 700;
+  }
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap'); */
+  
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.home,.submenu {
+  border: 1px solid rgba(93, 89, 89, 0.633);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1em;
+}
+
+.home {
+  width: 80px;
+}
+
+.submenu {
+  min-width: 100px;
+  max-width: 300px;
+  border-left: none;
+  position: relative;
+  flex-direction: column;
+}
+
+.menu-header {
+  display: flex;
+}
+
+.blog {
+  width: 100px;
+}
+
+.box {
+  width: 500px;
+}
+
+.menu-icon {
+  color: rgba(49, 47, 47, 0.866);
+  padding: 0 2px 0 12px;
+}
+
+.submenu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgba(49, 47, 47, 0.866);
+}
+
+
+.list-item {
+  display: none;
+}
+
+ol li p {
+  margin: 0 10px;
+}
+
+.fa-chevron-down {
+  font-size: 12px; 
+  margin-top: 2px;
+  padding: 0 12px 0 0;
+}
+
+.submenu:active .list-item {
+  display: block;
+}
+
+.submenu:hover .list-item {
+  display: block;
+}
+
+.submenu:hover::before,
+.submenu:active::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+
+.submenu:hover::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #900404;
+  position: absolute;
+  bottom: -22px;
+  left: 20%;
+}
+
+.submenu:hover:not(.box),.home:hover {
+  background-color: #2da5da;
+  color: aliceblue;
+}
+
+.submenu:hover .menu-icon {
+  color: aliceblue !important;
+}
+
+.home:hover .menu-icon {
+  color: aliceblue;
+}
+
+.fa-check::before {
+  color: #464444;
+}
+
+.list-item {
+  position: absolute; 
+  top: 80px;
+  width: 200px;
+  list-style: none;
+  /* display: block; */
+  box-shadow: 1px 1px 1px 1px #4644447c;
+  max-height: 200px;
+  left: 2px;
+}
+
+.item {
+  padding: 10px 20px;
+  border-bottom: #46444456 1px solid;
+  height: 60px;
+  width: 100%;
+  line-height: 40px;
+}
+
+.item:hover {
+  background-color: bisque;
+}
+
+.submenu.box::before,
+.submenu.box::after,
+.submenu.not-col::before, 
+.submenu.not-col::after
+  {
+  display: none;
+}
+
+.submenu.not-col {
+  flex-direction: row !important;
+}
+
+.submenu.not-col:hover #bug {
+  color: #fff;
+}

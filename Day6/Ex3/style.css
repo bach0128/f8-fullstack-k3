@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 500px;
+    background-image: url(http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg);
+    background-color: #ff574d;
+    object-fit: cover;
+}
+
+.desc {
+    width: 35%;
+    height: 50vh;
+    background-color: #EB6355;
+    margin: 10em auto;
+    border: 1px solid transparent;
+    border-radius: 2% 0 0 2%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.desc-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #EB6355;
+    font-size: 28px;
+    font-weight: 600;
+    border-radius: 5%;
+    margin-right: 4px;
+}
+
+.logo p {
+    line-height: 40px;
+    padding: 0 6px 6px 6px;
+}
+
+h1 {
+    color: #fff;
+}
+
+.content {
+    padding: 12px 16px;
+}
+
+.content p {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.all-content button {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 2%;
+    color: #EB6355;
+    cursor: pointer;
+    box-shadow: #3f3e3e 2px;
+}
+
+.navbar-footer {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 12px ;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-footer {
+    width: 20%;
+    font-size: 2.5em;
+    padding: 0 14px;
+    background-color: #DB5C4F;
+    color: #fff;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+/* Sprite-img */
+
+/* img {
+    width: 625px;
+    height: 603px;
+    object-fit: none;
+}
+
+
+.facebook {
+    width: 50px;
+    height: 50px;
+    object-position: -90px -465px;
+    background-color: #EB6355;
+    color: #fff;
+} */
+
+.infor-login {
+    position: relative;
+    display: block;
+    background-color: #ffffffbe;
+    width: 65%;
+    height: 50vh;
+    padding: 30px 20px;
+    border-radius: 0 2% 2% 0  ;
+}
+
+.login-header {
+    text-align: center;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.login-header::before {
+    content: "";
+    width: 60px;
+    bottom: 26em;
+    left: 17em;
+    position: absolute;
+    border-bottom: 3px solid #EB6355;
+}
+
+h2 span {
+    color: #EB6355;
+}
+
+.input {
+    width: 80%;
+    margin: 12px auto;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    padding: 4px 20px;
+    font-size: 20px;
+    border: 2px solid #c7c3c3;
+    border-radius: 5px;
+}
+
+.check-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 10px 40px;
+}
+
+
+
+.check-info label {
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.save-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input#check {
+    width: 30px;
+    border-radius: 2px solid #c7c3c3;
+    cursor: pointer;
+}
+
+.check-info p {
+    cursor: pointer;
+}
+
+.submit {
+    margin: 0;
+    display: flex;
+}
+
+.submit button {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 20px auto;
+    height: 60px;
+    font-size: 20px;
+    background-color: #EB6355;
+    color: #fff;
+    border: 2px solid transparent ;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.create-account {
+    text-align: center;
+}
+
+.circle-arrow {
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    border: 2px;
+    border-color: #767373;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: calc(40% + 1.5em)
+}
+
+.circle-arrow .fa-arrow-right {
+    color: #EB6355;
+    font-size: 20px;
+    font-weight: 600;
+}
