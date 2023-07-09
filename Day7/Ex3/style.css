@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@200;300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+
+}
+
+section {
+    padding: 12px 80px;
+}
+
+h1 {
+    text-align: left;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.item {
+    list-style: none;
+    margin: 6px 10px 12px 0;
+    width: 12.5%;
+    background-color: #E4E4E4;
+    border-radius: 40px;
+    border: 2px solid transparent;
+    height: 60px;
+    text-align: center;
+    line-height: 24px;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.item:active, .item:hover, .item:focus {
+    background-color: #AF7C38;
+    color: #fff;
+}
+
+.checked {
+    background-color: #AF7C38;
+    color: #fff;
+}
+
+.desc-img {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.address {
+    display: flex;
+    /* position: absolute; */
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid #fff;
+    border-radius: 2%;
+    color: #fff;
+    height: 260px;
+    margin: 10px 10px;
+    justify-content: space-between;    
+}
+
+.address#address-1 {
+    background-image: url('https://th.bing.com/th/id/OIP.87FgMcOpd4_cAfwEPBzNNAHaEG?pid=ImgDet&rs=1');
+}
+
+.address#address-2 {
+    background-image: url('https://zcc.com.vn/wp-content/uploads/2020/12/bat-dong-san-vung-ven-ho-chi-minh-but-pha-va-da-lam-chu-cuoc-choi-compoud-ven-song_qmzy.jpg');
+}
+
+.address#address-3 {
+    background-image: url('https://gotecland.vn/wp-content/uploads/2018/09/cung-cau-bat-dong-san.jpg');
+}
+
+.address#address-4 {
+    background-image: url('https://th.bing.com/th/id/OIP.qwMPsxzSLv16eB02V0w1KwHaE8?pid=ImgDet&rs=1');
+}
+
+.address#address-5 {
+    background-image: url('https://th.bing.com/th/id/OIP.xrFpWwhCTAxqc2eOFEE1ewHaFS?pid=ImgDet&rs=1');
+}
+
+.address#address-6 {
+    background-image: url('https://th.bing.com/th/id/OIF.FkVDg7bCA80muZXzE8EXxQ?pid=ImgDet&rs=1');
+}
+
+.address h2 {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.address p {
+    line-height: 60px;
+    margin-left: 20px;
+}
