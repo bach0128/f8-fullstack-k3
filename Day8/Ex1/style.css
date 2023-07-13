@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    color: #2c3445;
+}
+
+body {
+    background-image: url(https://fastly.picsum.photos/id/584/1920/980.jpg?hmac=LwOlkcOlzEaJWAryTRCk__q9VAdSYq5onQ62tZmzvio);
+    margin: 30px 60px;
+    font-weight: 900;
+    object-fit: contain;
+    background-attachment: fixed;
+    position: fixed;
+}
+
+.menu {
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+
+}
+
+.navbar .logo {
+    display: flex;
+}
+
+.navbar .logo p {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.navbar .logo img {
+    transform: rotate(90deg);
+    padding: 0;
+    width: 32px;
+    height: 30px;
+    margin-top: 8px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-list .checked p{
+    color: #9599A3;
+}
+
+.navbar-list li{
+    display: inline-flex;
+    margin: 0 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-list li i{
+    font-size: 12px;
+    margin: 5px 0 0 4px;
+}
+
+.navbar-list .search {
+    margin-right: 4px;
+}
+
+.navbar-list .search i{
+    font-size: 22px;
+}
+
+.item-desc {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 500px;
+    padding: 30px 40px;
+    display: inline-flex;
+}
+
+h2 {
+    padding: 10px 0 !important;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+h2,a {
+    color: #2c3445e5;
+}
+
+a:hover {
+    color: rgba(165, 42, 42, 0.822);
+}
+
+.item-desc .col_1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+}
+
+.item-desc .col_1::before {
+    content: "";
+    width: 0;
+    height: 95%;
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    border-right: 1px solid rgba(166, 165, 165, 0.385);
+}
+.item-desc .col_1 .col_1-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 12px 0;
+}
+
+.item-desc .col_1 .col_1-item a {
+    text-decoration: none;
+    width: 50%;
+    padding: 12px 0 ;
+}
+
+.item-desc .col_2 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.item-desc .col_2 .col_2-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-desc .col_2 .col_2-item a {
+    text-decoration: none;
+    width: 33.333%;
+    padding: 10px 0;
+}
