@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ex3</title>
+  </head>
+  <body>
+    <div class="form_submit">
+      <h2>Drop Us a Line</h2>
+      <p>
+        Reach out to us from our contact form and we will get back to you
+        shortly
+      </p>
+      <div class="info-list">
+        <div class="user-info">
+          <input type="text" id="input-1" required />
+          <label for="input-1">
+            <span>First Name *</span>
+          </label>
+        </div>
+        <div class="user-info">
+          <input type="text" id="input-2" required />
+          <label for="input-2">
+            <span>Last Name *</span>
+          </label>
+        </div>
+        <div class="user-info">
+          <input type="email" id="input-3" required />
+          <label for="input-3">
+            <span>Email *</span>
+          </label>
+        </div>
+        <div class="user-info select">
+          <select>
+            <option value="" disabled>Select a department</option>
+            <option value="1">Sales</option>
+            <option value="2">Marketing</option>
+            <option value="3">Customer Support</option>
+            <option value="4">Media</option>
+          </select>
+          <i class="fa-solid fa-chevron-down icon"></i>
+        </div>
+        <div class="user-info message">
+          <textarea id="input-4" name="message" cols="50" rows="20"></textarea>
+          <label for="input-4">
+            <span>Message *</span>
+          </label>
+        </div>
+        <div class="btn-submit">
+          <button>Send message</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
