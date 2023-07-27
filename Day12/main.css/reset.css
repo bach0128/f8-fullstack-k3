@@ -43,6 +43,13 @@ table {
 	border-spacing: 0;
 }
 
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
 *,:after,:before {
     margin: 0;
     padding: 0;

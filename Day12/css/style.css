@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background: url(../img/landing-background.jpg) no-repeat center;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  left: -20%;
+  font-family: Titillium Web, sans-serif;
+  color: var(--white);
+  width: 50%;
+  margin: 60px auto;
+}
+.content .content_info {
+  text-align: center;
+}
+.content .content_info > img {
+  color: var(--white);
+  margin: 20px;
+}
+.content .content_info h3 {
+  font-size: 1.4em;
+  margin-bottom: 0;
+}
+.content .content_info h1 {
+  font-weight: 900;
+  font-size: 6.5em;
+  margin-bottom: 40px;
+}
+.content .content_info p {
+  width: 400px;
+  margin: 30px auto 0;
+  font-size: 1.125rem;
+  line-height: 1.3em;
+  font-weight: 500;
+}
+.content .switch_btn {
+  text-align: center;
+  margin-top: 80px;
+}
+.content .switch_btn label {
+  font-family: Rajdhani, sans-serif;
+  display: inline-block;
+  width: 180px;
+  height: 54px;
+  line-height: 54px;
+  font-weight: 700;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.content .switch_btn .switch_btn_login {
+  position: relative;
+  border: 1px solid var(--white);
+  border-radius: 10px 0 0 10px;
+}
+.content .switch_btn .switch_btn_login:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -6px;
+  width: 0;
+  height: 54px;
+  border: 3px solid var(--white);
+}
+.content .switch_btn .switch_btn_register {
+  border: 1px solid var(--white);
+  border-radius: 0 10px 10px 0;
+}
+.content .switch_btn #login:checked ~ label.switch_btn_login,
+.content .switch_btn #register:checked ~ label.switch_btn_register {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.form_login {
+  width: 484px;
+  height: 60%;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  right: 15%;
+  padding: 64px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  position: absolute;
+  transform: translate(0px, 0px);
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.6s ease-in-out;
+}
+.form_login .form_login_decor {
+  position: relative;
+}
+.form_login .form_login_decor > img {
+  position: absolute;
+  top: -135px;
+  left: -145px;
+}
+
+/*# sourceMappingURL=style.css.map */
