@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./main.css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Vikinger-page</title>
   </head>
   <body>
     <div class="container">
-      <div class="container_decoration">
-        <p>afhjgahsfghjagsfhja</p>
-      </div>
+      <input type="radio" id="login" name="switch_btn_check" hidden checked />
+      <input type="radio" id="register" name="switch_btn_check" hidden />
+      <div class="container_decoration"></div>
       <!-- Content -->
       <div class="content">
         <div class="content_info">
@@ -31,16 +38,7 @@
             famification system!
           </p>
         </div>
-
         <div class="switch_btn">
-          <input
-            type="radio"
-            id="login"
-            name="switch_btn_check"
-            checked
-            hidden
-          />
-          <input type="radio" id="register" name="switch_btn_check" hidden />
           <label for="login" class="switch_btn_login">Login</label>
           <label for="register" class="switch_btn_register">Register</label>
         </div>
@@ -53,58 +51,54 @@
           <img src="./img/rocket.png" alt="rocket" />
         </div>
         <h3>Account Login</h3>
-        <div class="login_name">
-          <input type="text" placeholder="Username or Email" />
+        <!-- login_body -->
+        <div class="form_login_body">
+          <div class="login_name">
+            <input type="text" id="login_name" />
+            <label for="login_name">
+              <span> Username or Email </span>
+            </label>
+          </div>
+          <div class="login_password">
+            <input type="password" id="login_password" />
+            <label for="login_password">
+              <span> Password </span>
+            </label>
+          </div>
+          <div class="login_save">
+            <div class="login_remember">
+              <input type="checkbox" id="login_remember" hidden />
+              <label for="login_remember">
+                <span class="check_box">
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+                <p>Remember Me</p>
+              </label>
+            </div>
+            <div class="forgot_password">
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+
+          <div class="login_btn">
+            <button>Login to your Account!</button>
+          </div>
         </div>
-        <div class="login_password">
-          <input type="password" placeholder="Password" />
-        </div>
-        <div class="login_remember">
-          <input type="checkbox" id="login_remember" />
-          <label for="login_remember">
-            <p>Remember Me</p>
-          </label>
-        </div>
-        <div class="forgot_password">
-          <a href="#">Forgot Password?</a>
-        </div>
-        <div class="login_btn">
-          <button>Login to your Account!</button>
-        </div>
-        <span><p>Login width your Social Account</p></span>
-        <div class="social_link">
+        <!-- login_body end -->
+        <span class="social_header_line">Login width your Social Account</span>
+        <div class="social_links">
           <div class="social_link_facebook">
-            <img
-              width="24"
-              height="24"
-              src="https://img.icons8.com/material-outlined/24/000000/facebook.png"
-              alt="facebook"
-            />
+            <i class="fa-brands fa-square-facebook"></i>
           </div>
           <div class="social_link_twitter">
-            <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"
-              alt="twitter--v1"
-            />
+            <i class="fa-brands fa-twitter"></i>
           </div>
           <div class="social_link_twitch">
-            <img
-              width="50"
-              height="50"
-              src="https://img.icons8.com/ios/50/000000/twitch--v1.png"
-              alt="twitch--v1"
-            />
+            <i class="fa-brands fa-twitch"></i>
           </div>
 
           <div class="social_link_youtube">
-            <img
-              width="24"
-              height="24"
-              src="https://img.icons8.com/material-rounded/24/000000/youtube-play.png"
-              alt="youtube-play"
-            />
+            <i class="fa-brands fa-youtube"></i>
           </div>
         </div>
       </div>
@@ -112,27 +106,58 @@
       <!-- login end -->
 
       <!-- register -->
-      <div class="form_register" hidden>
-        <h2>Create your Account!</h2>
-        <div class="register_email"></div>
-        <div class="register_username"></div>
-        <div class="register_password"></div>
-        <div class="register_repeat_password"></div>
-        <div class="send_notification">
-          <input type="checkbox" id="accept_send_noti" />
-          <label for="accept_send_noti">
-            <p>Send me news and via email</p>
-          </label>
+      <div class="form_register">
+        <div class="form_register_decor">
+          <img src="./img/rocket.png" alt="rocket" />
+        </div>
+        <h3>Create your Account!</h3>
+        <div class="form_register_body">
+          <div class="register_email">
+            <input type="text" id="register_email" />
+            <label for="register_email">
+              <span> Your Email </span>
+            </label>
+          </div>
+          <div class="register_username">
+            <input type="text" id="register_username" />
+            <label for="register_username">
+              <span> Username </span>
+            </label>
+          </div>
+          <div class="register_password">
+            <input type="text" id="register_password" />
+            <label for="register_password">
+              <span> Password </span>
+            </label>
+          </div>
+          <div class="register_repeat_password">
+            <input type="text" id="register_repeat_password" />
+            <label for="register_repeat_password">
+              <span>Repeat Password </span>
+            </label>
+          </div>
+          <div class="send_notification">
+            <input type="checkbox" id="accept_send_noti" hidden />
+            <label for="accept_send_noti">
+              <span class="check_box">
+                <i class="fa-solid fa-xmark"></i>
+              </span>
+              <p>Send me news and via email</p>
+            </label>
+          </div>
+
+          <div class="register_btn">
+            <button>Register Now!</button>
+          </div>
         </div>
 
-        <div class="register_btn">
-          <button>Register Now!</button>
-        </div>
+        <!-- register_body end -->
+
         <div class="register_footer_note">
           <p>
             You"ll receive a confirmation email in your inbox with a link to
             active your account.If you have any problems,
-            <span><a href="#10">contact us </a></span>
+            <span><a href="#10">contact us</a>!</span>
           </p>
         </div>
       </div>
