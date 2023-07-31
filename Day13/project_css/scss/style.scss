@@ -1,0 +1,29 @@
+// Import Parts
+@import 'parts/_variables';
+@import 'parts/_fonts';
+@import 'parts/_reset';
+@import 'parts/_mixin';
+@import 'parts/_base';
+
+// import Layouts
+
+@import 'layouts/_footer';
+@import 'layouts/_header';
+
+
+// Import pages
+
+// 1.home
+@import 'page/home/header';
+@import 'page/home/section_1';
+@import 'page/home/section_2';
+@import 'page/home/section_3';
+@import 'page/home/section_4';
+@import 'page/home/section_5';
+@import 'page/home/section_6';
+@import 'page/home/section_7';
+@import 'page/home/footer';
+
+
+
+

@@ -1,0 +1,102 @@
+
+
+.section_5 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    .section_5-name {
+        text-align: center;
+        h3 {
+            @include section-header-name;
+            padding: 10px 400px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.417px;
+            padding: 10px 300px;
+        }
+    }
+    
+    .content {
+        .list-item {
+            min-height: 420px;
+            .bg-wrap {
+                height: 100%;
+                background-color: #fff;
+                border-radius: 8px;
+                .content-desc {
+                    h4 {
+                        margin-top: 50px;
+                        padding: 0 30px;
+                        color:  #E05000;
+                        text-shadow: 0px 3.3333332538604736px 3.3333332538604736px 0px rgba(0, 0, 0, 0.25);
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 26.667px;
+                    }
+    
+                    p {
+                        padding: 0 30px;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20.417px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
+
+.section_5::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 70%;
+    background-color: #FFF0E7;
+    z-index: -1;
+    bottom: -120px;
+    left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .section_5::after {
+        visibility: hidden;
+    }
+
+    .section_5 {
+        padding: 20px 100px;
+        .section_5-name {
+            h3,p {
+            padding: 20px 50px;
+            }
+        }
+        .content {
+            .list-item {
+                margin-top: 20px;
+                .bg-wrap {
+                    img {
+                        width: 100%;
+                    }
+                    .content-desc {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) { 
+    .section_5 {
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .section_5 {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,98 @@
+
+.section_4 {
+    margin: 100px 0;
+    .section_4-name {
+        h4 {
+            @include section-header-name;
+        }
+
+        .new-information {
+            padding: 20px 300px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.417px;
+        }
+    }
+
+    .content {
+        .list-item {
+            .time {
+                padding: 8px 0;
+                display: flex;
+                justify-content: space-between;
+                p {
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 500;
+                    color: #46B20F;
+                }
+
+                span {
+                    display: inline-flex;
+                    img {
+                        width: 16.667px;
+                        height: 16.667px;
+                        font-size: 15px;
+                        line-height: 15px;
+                    }
+                    p {
+                        padding-left: 10px;
+                        color: #A3A3A3;
+                    }
+                }
+            }
+
+            .item-name {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 26.667px;
+                margin-bottom: 8px;
+            }
+
+            .item-desc {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.417px;
+            }            
+        }
+    }
+
+    .button-more {
+        cursor: pointer;
+        margin-top: 60px;
+        display: flex;
+        padding: 11.667px 21.667px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        border: 0.833px solid  #46B20F;
+        button {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: transparent;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .section_4 {
+        .section_4-name {
+            .new-information {
+                padding: 20px 100px;
+            }
+        }
+        
+        .content { 
+            padding: 20px 50px;
+            .list-item {
+                padding: 0 20px ;
+                margin: 20px 0;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

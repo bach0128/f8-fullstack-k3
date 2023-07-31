@@ -1,0 +1,105 @@
+
+footer {
+    margin: 30px auto;
+    background-color: #F2FFEC;
+    h3 {
+        font-size: 16.667px;
+        font-weight: 600;
+        line-height: 21.667px;
+        color: $primaryColor;
+    }
+    .logo {
+        p {
+            font-size: 13.333px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20.417px;
+            span {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.417px;
+            }
+        }
+    }
+
+    .home-nav {
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        
+        a {
+            margin: 6px 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.417px;
+        }
+    }
+
+    .help {
+        p {
+            margin: 6px 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.417px;
+
+        }
+        span {
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+            }
+            
+        }
+    }
+
+    .contact-us {
+        span {
+            p {
+                margin: 6px 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.417px;
+            }
+            
+        }
+    }
+
+    .social-media {
+        margin-top: 40px;
+        .row {
+            .social-app {
+                display: flex;
+                flex-direction: row-reverse;
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #DCFFCA;
+                    margin: 0 4px;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    footer {
+        padding: 20px 100px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    footer {
+        .container {
+        padding: 20px auto;
+            div {
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+}

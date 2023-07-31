@@ -1,0 +1,189 @@
+
+
+.section_2 {
+    .section_2-header {
+        text-align: center;
+        h2 {
+            margin-bottom: 24.333px;
+            font-size: 2.8em;
+            font-weight: 800;
+            padding: 0 320px;
+            line-height: 42px;
+        }
+        p {
+            font-size: 16px;
+            padding: 0 300px;
+            font-weight: 400;
+        }
+    }
+
+    .section_2-content {
+        width: 100%;
+        padding: 100px 100px;
+
+        .wrap-bg:nth-child(1),
+        .wrap-bg:nth-child(3) {
+            width: 294.167px;
+            height: 337.5px;
+            .list-media {
+                .media-icon {
+                    background-color: #FFF0E7;
+                    }
+            }
+        }
+
+        .wrap-bg:nth-child(2) {
+            width: 342.5px;
+            height: 392.5px;  
+            .list-media {
+                .media-icon {
+                    margin-top: 24px;
+                    background-color: #F2FFEC;
+                    }
+                }      
+        }
+
+        .wrap-bg:nth-child(1) {
+            .list-media::after {
+                content: "";
+                position: absolute;
+                width: 235px;
+                height: 235px;
+                flex-shrink: 0;
+                background-color: #DCFFCA;
+                border-radius: 50%;
+                z-index: -1;
+                top: -100px;
+                left: -100px;
+            }
+        }
+
+        .wrap-bg:nth-child(3) {
+            .list-media::after {
+                content: "";
+                position: absolute;
+                width: 235px;
+                height: 235px;
+                flex-shrink: 0;
+                background-color: #FFD5BD;
+                border-radius: 50%;
+                z-index: -1;
+                right: -100px;
+                bottom: -100px;
+            }
+        }
+
+        .wrap-bg {
+            .list-media {
+                position: relative;
+                height: 100%;
+                padding: 50px 26px;
+                border-radius: 3.333px;
+                background: var(--white, #FFF);
+                box-shadow: -5.8333330154418945px 8.333333015441895px 72.5px 0px rgba(54, 54, 54, 0.12);
+                .media-icon { 
+                    display: flex;
+                    border-radius: 10px;
+                    width: 83.333px;
+                    height: 83.333px;   
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+
+                h3 {
+                    font-size: 43.333px;
+                    font-style: normal;
+                    font-weight: 800;
+                    margin: 24px 0;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 30.833px;
+                }
+            }
+            
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .section_2 {
+        .section_2-header {
+            h2, p {
+                padding: 0 100px;
+            }
+            
+        }
+
+        .section_2-content {
+            padding: 50px ;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section_2 {
+        .section_2-header {
+            h2, p {
+                padding: 0 50px;
+            }
+            
+        }
+
+        .section_2-content {
+            padding: 50px;
+            .wrap-bg {
+                margin: 30px auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section_2 {
+        margin: 50px;
+        .section_2-header {
+            h2, p {
+                padding: 0;
+            }
+            
+        }
+
+        .section_2-content {
+            padding: 50px ;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .section_2 {
+        margin: 20px;
+        .section_2-content {
+            padding: 20px ;
+        }
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .section_2 {
+        margin: 0px;
+        .section_2-content {
+            padding: 0px ;
+            .wrap-bg {
+                width: 100% !important;
+                margin: 30px;
+            }
+        }
+    }
+
+}
