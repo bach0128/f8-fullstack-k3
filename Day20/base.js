@@ -106,7 +106,6 @@ function render() {
             </div>
         `;
     });
-    console.log(result);
     document.body.innerHTML = result;
 }
 render();
