@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="../Day23/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Day23</title>
+  </head>
+  <body>
+    <a href="#form" class="show-form">Đăng nhập</a>
+    <section>
+      <!-- Start user infor -->
+      <div class="userInfor">
+        <div class="btnJoin">
+          <button class="btnLogin btnNav active">
+            <input type="radio" id="1" name="checkNav" hidden required />
+            <label for="1">Đăng nhập</label>
+          </button>
+          <button class="btnCreate btnNav">
+            <input type="radio" id="2" name="checkNav" hidden required />
+            <label for="2">Đăng ký</label>
+          </button>
+        </div>
+        <!-- Start login form -->
+        <form action="login" class="form-login">
+          <p>vào các tài khoản mạng xã hội</p>
+          <div class="connectSocial">
+            <span>
+              <a href="#google">Google</a>
+            </span>
+            <span>
+              <a href="#facebook">Facebook</a>
+            </span>
+          </div>
+          <hr />
+          <span class="complete-login"></span>
+          <div class="userEmail">
+            <p>Email</p>
+            <input
+              type="text"
+              placeholder="Email"
+              name="email-login"
+              required
+            />
+          </div>
+          <span class="error-email"></span>
+          <div class="userPassword">
+            <p>Mật khẩu</p>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password-login"
+              required
+            />
+            <button class="showPass">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <span class="error-password"></span>
+          <a href="#forget">Quên mật khẩu?</a>
+          <button class="btnSubmit">Đăng nhập</button>
+        </form>
+        <!-- End login form -->
+
+        <!-- Start create form -->
+        <form action="createNew" class="form-create">
+          <p>Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!</p>
+
+          <div class="userFullName">
+            <p>Họ và tên</p>
+            <input type="text" placeholder="Họ và tên" required />
+          </div>
+
+          <div class="userEmail">
+            <p>Email</p>
+            <input type="text" placeholder="Email" required />
+          </div>
+
+          <div class="userPassword">
+            <p>Mật khẩu</p>
+            <input type="password" placeholder="Mật khẩu" required />
+          </div>
+
+          <p>
+            Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi
+            <span> điều kiện về quy định và chính sách của Dân trí</span>
+          </p>
+
+          <button class="btnSubmit">Đăng ký</button>
+        </form>
+        <!-- End create form -->
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <script src="../Day23/base.js"></script>
+  </body>
+</html>
