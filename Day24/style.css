@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif ;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --primaryColor: rgb(135, 88, 255);
+}
+
+body {
+    background-color: var(--primaryColor);
+  }
+
+.todo-app {
+    background-color: rgb(26,26,64);
+    color: #fff;
+    width: 400px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(0, 0, 0, .05);
+}
+
+.todo-app  p{
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 10px;    
+}
+
+.todo-app .create-task
+{
+    width: 100% ;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+}
+
+.todo-app .create-task input{
+    border: 1px solid var(--primaryColor);
+    background-color: rgb(26,26,64);
+    height: 30px;
+    padding-left: 20px;
+    width: 80%;
+    color: #fff;
+    outline: none;
+}
+
+.todo-app .create-task input:active {
+    border: 1px solid var(--primaryColor);
+}
+
+.todo-app .create-task .btn-task{
+    background-color: var(--primaryColor);
+    height: 30px;
+    color: #fff;
+    border: 1px solid var(--primaryColor);
+    font-style: bold;
+    position: relative;
+    width: 20%;
+    font-size: 0.7em;
+    cursor: pointer;
+
+}
+
+.list-task {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.task {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: var(--primaryColor);
+    border: 1px solid transparent;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 4px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+
+.task p {
+    font-size: .7em;
+    line-height: 40px;
+    padding: 0;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.task .change-task i {
+    font-size: 0.8em;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+.task .line-through {
+    text-decoration: line-through;
+    color: #c5aeff;
+}
+
+.active {
+    display: none;
+}
