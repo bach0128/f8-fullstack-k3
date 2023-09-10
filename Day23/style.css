@@ -96,6 +96,18 @@ body {
     color: black;
 }
 
+.form-login .userEmail .error,
+.form-login .userPassword .error {
+    color: red;
+    font-style: italic;
+    font-size: .85em;
+}
+
+.form-login .has-error .field-item {
+    border-color: red;
+}
+
+
 .form-login .userPassword {
     position: relative;
 }
@@ -163,7 +175,7 @@ input {
 }
 
 input:checked {
-    border: 1px solid rgba(128, 128, 128, 0.322);
+    border: 1px solid transparent;
 }
 
 div p {

@@ -27,7 +27,7 @@
           </button>
         </div>
         <!-- Start login form -->
-        <form action="login" class="form-login">
+        <form action="" class="form-login">
           <p>vào các tài khoản mạng xã hội</p>
           <div class="connectSocial">
             <span>
@@ -39,36 +39,36 @@
           </div>
           <hr />
           <span class="complete-login"></span>
-          <div class="userEmail">
-            <p>Email</p>
+          <div class="form-group userEmail error-email">
+            <label for=""> Email</label>
             <input
+              class="field-item email"
               type="text"
               placeholder="Email"
-              name="email-login"
               required
             />
+            <span class="error">Vui lòng nhập email</span>
           </div>
-          <span class="error-email"></span>
-          <div class="userPassword">
-            <p>Mật khẩu</p>
+          <div class="form-group userPassword error-password">
+            <label for="">Mật khẩu</label>
             <input
+              class="field-item password"
               type="password"
               placeholder="Password"
-              name="password-login"
               required
             />
+            <span class="error">Vui lòng nhập password</span>
             <button class="showPass">
               <i class="fa-solid fa-eye"></i>
             </button>
           </div>
-          <span class="error-password"></span>
           <a href="#forget">Quên mật khẩu?</a>
-          <button class="btnSubmit">Đăng nhập</button>
+          <button type="submit" class="btnSubmit">Đăng nhập</button>
         </form>
         <!-- End login form -->
 
         <!-- Start create form -->
-        <form action="createNew" class="form-create">
+        <form action="" class="form-create">
           <p>Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!</p>
 
           <div class="userFullName">

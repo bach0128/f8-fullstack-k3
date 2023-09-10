@@ -64,4 +64,3 @@ prevBtn.addEventListener('click', function() {
     }
 })
 
-alert("chua lam duoc phan keo anh")
