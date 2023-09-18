@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table, th, td {
+    border:1px solid black;
+  }
+
+h2 {
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+.product-items {
+    width: 95%;
+    margin: 10px 20px;
+    border: 1px solid;
+}
+
+.user-cart {
+    margin: 20px;
+    display: none;
+    width: 95%;
+}

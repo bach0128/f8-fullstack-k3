@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+
+  :root {
+    --containerWidth: ${containerWidth};
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .player {
+    display: flex;
+  }
+  
+  .play-btn {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    position: relative;
+    height: 20px;
+    background: gray;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  
+  .progress-bar:hover {
+    background: greenyellow;
+  }
+  
+  .progress-bar .progress {
+    position: absolute;
+    background: red;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .progress-bar .progress span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-radius: 50%;
+    background: blueviolet;
+    translate: 50% -50%;
+  }
+  
+  .progress-bar .time-preview {
+    position: absolute;
+    top: 0;
+    translate: -50% -110%;
+    background: black;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    display: none;
+  }
+  
+  .progress-bar .time-preview.show {
+    display: block;
+  }
+
+  .open-karaoke {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .open-karaoke>button {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: blueviolet ;
+    border: 1px solid transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .karaoke {
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blueviolet;
+    animation: translate 1s ease;
+    translate: 0 100vh;
+  }
+
+  .karaoke .header{
+    margin: 0 600px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 2.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .karaoke .header .close {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  .karaoke-lyric {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    z-index: 10;
+  }
+
+  .karaoke-lyric>div {
+    margin: 50px auto;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .karaoke-lyric p{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 50px;
+    letter-spacing: 1.5px;
+
+  }
+
+  .karaoke-lyric p span {
+    color: #fff;
+  }
+
+  .show {
+    translate: 0 0;
+  }

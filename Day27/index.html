@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Day27/style.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <table class="product-items">
+      <h2>Danh sách sản phẩm</h2>
+    </table>
+
+    <h2>Giỏ hàng</h2>
+
+    <div class="user-cart">
+      <table class="user-cart-table">
+        <tr width="100%">
+          <th width="5%">STT</th>
+          <th width="25%">Tên sản phẩm</th>
+          <th width="25%">Giá</th>
+          <th width="25%">Số lượng</th>
+          <th width="25%">Thành tiền</th>
+          <th>Xóa</th>
+        </tr>
+        <tr class="total">
+          <td colspan="3">Tổng</td>
+        </tr>
+      </table>
+      <button type="button" id="update_cart">Cập nhật giỏ hàng</button>
+      <button type="button" id="delete_cart">Xoá giỏ hàng</button>
+    </div>
+
+    <script src="../Day27/base.js"></script>
+  </body>
+</html>
