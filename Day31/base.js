@@ -5,7 +5,7 @@ var countDown = container.querySelector(" .count-down")
 var btnWrap = document.querySelector(".container .btn-wrap")
 var btnGetLink = btnWrap.querySelector(".get-link")
 
-var counter = 5
+var counter = 30
 var timer = 0;
 const interval = 1000;
 
