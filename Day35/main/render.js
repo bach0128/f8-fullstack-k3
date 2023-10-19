@@ -8,6 +8,8 @@ const getPosts = async ( query = {}) => {
     render(posts)
 }
 
+getPosts()
+
 const render = (posts) => {
     
     let postsHTML = ``;
@@ -53,6 +55,5 @@ window.addEventListener("scroll",() => {
     };
 })
 
-getPosts()
 
 
