@@ -174,11 +174,14 @@ const app = {
       
             table += '</tr></table>';
             elem.innerHTML = table;
-            elem.addEventListener('click', (e) => {
-              countDownPost.textContent = ""
-              day = e.target.textContent
-
             // countdown to post
+            elem.addEventListener('click', (e) => {
+              const div = document.createElement("div")
+              day = e.target.textContent
+              div.innerHTML = `<p>Ngày post bài:2023-${month}-${day}</p>`
+
+              countDownPost.textContent = ""
+
             let countDownDate = new Date(2023, mon, day, 0, 0, 0).getTime();
             var x = setInterval(function() {
               var now = new Date().getTime();
@@ -191,6 +194,8 @@ const app = {
 
               countDownPost.innerHTML = days + "d " + hours + "h "
               + minutes + "m " + seconds + "s " ;
+              
+              countDownPost.appendChild(div)
 
               if (distance < 0) {
                 clearInterval(x);
