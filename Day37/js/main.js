@@ -10,6 +10,8 @@ const home = document.getElementById("home")
 const homeHeader = home.querySelector("header")
 const signInBtn = document.querySelector(".container .btn-sign-in")
 const formLoginEl = document.querySelector(".login")
+const newBlogEl = document.querySelector(".container .new-blog")
+const blogsEl = document.querySelector(".container .blogs")
 
 let checkLogin = false
 
@@ -104,11 +106,111 @@ const app = {
           userProfile.innerHTML = `
             <p style="color: #30c67c; font-weight: bold;"></p>
             <button class="new-blog">Add new blog</button>
-            <button class="logout">Logout</button>
+            <button class="sign-out">Sign out</button>
           `
           userProfile.querySelector("p").innerText = data.email
+          // xử lý create new blogs and sign out
+          const newBlogBtn = userProfile.querySelector(".new-blog")
           this.render()
-      }
+          newBlogBtn.addEventListener('click', function() {
+            userProfile.style.display = "none"
+            blogsEl.style.display = "none"
+            newBlogEl.innerHTML = `
+            <div class="m-3">
+            <label for="title" class="fw-bold">Title</label>
+            <input type="text" class="form-label" id="title" placeholder="title" />
+          </div>
+          <div class="m-3">
+            <label for="new-content" class="fw-bold">Content</label>
+            <textarea
+              class="form-control"
+              id="new-content"
+              rows="3"
+              col="10"
+            ></textarea>
+          </div>
+          <p>Set month for posting</p>
+          <input class="month" type="number" min="1" max="12" placeholder="Choose month"></input> 
+          <div class="calendar"></div>
+          <div class="count-down-post"></div>
+            `
+
+            // create calendar
+          const monthEl = newBlogEl.querySelector(".month")
+          const calendar = newBlogEl.querySelector(".calendar")
+          const countDownPost = newBlogEl.querySelector(".count-down-post")
+
+          let month,day
+          monthEl.addEventListener("change", () => {
+            month = monthEl.value
+            createCalendar(calendar, 2023, month)
+          })
+          function createCalendar(elem, year, month) {
+            let mon = month - 1; 
+            let d = new Date(year, mon);
+      
+            let table = '<table class="table-dark" style="cursor: pointer"><tr class="table-dark"><th class="table-dark">MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr><tr>';
+      
+            for (let i = 0; i < getDay(d); i++) {
+              table += '<td></td>';
+            }
+      
+            while (d.getMonth() == mon) {
+              table += '<td>' + d.getDate() + '</td>';
+      
+              if (getDay(d) % 7 == 6) { // sunday, last day of week - newline
+                table += '</tr><tr>';
+              }
+      
+              d.setDate(d.getDate() + 1);
+            }
+      
+            // add spaces after last days of month for the last row
+            if (getDay(d) != 0) {
+              for (let i = getDay(d); i < 7; i++) {
+                table += '<td></td>';
+              }
+            }
+      
+            table += '</tr></table>';
+            elem.innerHTML = table;
+            elem.addEventListener('click', (e) => {
+              countDownPost.textContent = ""
+              day = e.target.textContent
+
+            // countdown to post
+            let countDownDate = new Date(2023, mon, day, 0, 0, 0).getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              countDownPost.innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s " ;
+
+              if (distance < 0) {
+                clearInterval(x);
+                countDownPost.innerHTML = "EXPIRED";
+                alert("Posting your blog")
+                }
+              }, 1000);
+              })
+          }
+      
+          function getDay(date) { 
+            let day = date.getDay();
+            if (day == 0) {
+              day = 7}; 
+            return day - 1;
+          }
+
+          
+      })
+    }
   },
   getProfile: async function(el) {
       if (this.isLogin()) {
@@ -153,16 +255,27 @@ const app = {
 
       const email = emailEl.value
       const password = passwordEl.value
-
+      // validate email 
+      const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+      if (!validateEmail) {
+        msg.innerText = "Email hoặc mật khẩu không chính xác"
+      } else {
       this.handleLogin({email, password}, msg)
+      }
       })
   },
 // xử lý logout 
-handleLogout: function() {
-  checkLogin = false
-    localStorage.removeItem("login_tokens")
-    this.render()
-},
+  handleLogout: function() {
+    checkLogin = false
+      localStorage.removeItem("login_tokens")
+      this.render()
+  },
   // eventLogout: function() {
   //     const logout = document.querySelector(".profile .logout")
   //     logout.addEventListener("click", (e) => {
@@ -179,7 +292,6 @@ handleLogout: function() {
 
 // render blogs 
   renderBlogs: function(products) {
-    console.log(products);
     const totalItems = products.length;
     // const totalPages = Math.ceil(totalItems / PAGE_LIMIT);
     const blogEl = document.querySelector(".blogs");
@@ -211,7 +323,9 @@ handleLogout: function() {
     }
     `;
   }
+
 }
+
 
 
 
