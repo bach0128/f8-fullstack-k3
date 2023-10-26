@@ -99,6 +99,7 @@ const app = {
           userProfile.style.display = "flex"
           this.getProfile(userProfile)
           this.getBlog()
+          this.eventSignOut()
       }
   }, 
   
@@ -272,7 +273,7 @@ const app = {
     localStorage.removeItem("login_tokens")
     this.render()
   },
-  eventLogout: function() {
+  eventSignOut: function() {
       const logout = userProfile.querySelector(".sign-out")
       logout.addEventListener("click", (e) => {
           e.preventDefault()
