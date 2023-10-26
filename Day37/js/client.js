@@ -34,9 +34,10 @@ export const client = {
         }
 
         const response = await fetch(url, options)
+
         const data = await response.json()
     
-        return {response, data }
+        return { response, data }
     },
 
     get: function(url) {
