@@ -276,7 +276,7 @@ const app = {
       const logout = userProfile.querySelector(".sign-out")
       logout.addEventListener("click", (e) => {
           e.preventDefault()
-          this.handleLogout()
+          this.handleSignOut()
       })
   }
 }
