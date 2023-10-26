@@ -10,18 +10,11 @@ const formSignInEl = document.querySelector(".sign-in")
 const formSignUpEl = document.querySelector(".sign-up")
 const newBlogEl = document.querySelector(".container .new-blog")
 const blogsEl = document.querySelector(".container .blogs")
-const goHomeBtnList = document.querySelectorAll(".container .go-home")
-const signInBtn = document.querySelector(".container .sign-in-btn")
+const signInBtn = formSignUpEl.querySelector(".container .btn-submit .sign-in-btn")
 const userProfile = document.querySelector(".user-profile")
 const newBlogBtn = userProfile.querySelector(".new-blog-btn")
 
-goHomeBtnList.forEach((homeBtn) => {
-  homeBtn.addEventListener('click', () => {
-    homeHeader.style.display = "block"
-    formSignInEl.style.display = "none"
-    formSignUpEl.style.display = "none"
-})
-})
+let checkFormSignUp = false
 
 signInNav.addEventListener('click', () => {
   homeHeader.style.display = "none"
@@ -29,9 +22,14 @@ signInNav.addEventListener('click', () => {
   blogsEl.style.display = "none"
   })
 
+signInBtn.addEventListener('click', () => {
+  homeHeader.style.display = "none"
+  formSignInEl.style.display = "flex"
+  formSignUpEl.style.display = "none"
+  })
+
 const app = {
   render: function() {
-    console.log(this.isSignIn());
     // hiển thị form sign-in 
     if (!this.isSignIn()) {
       formSignInEl.innerHTML = `
@@ -67,7 +65,7 @@ const app = {
               <div class="btn-submit">
                 <div class="container">
                   <div class="grid gap-1 column-gap-2">
-                    <button class="p-2 g-col-6 sign-in-btn">Sign in</button>
+                    <button type="submit" class="p-2 g-col-6 sign-in-btn">Sign in</button>
                     <button class="p-2 g-col-6 sign-up-btn">Sign up</button>
                   </div>
                 </div>
@@ -78,46 +76,33 @@ const app = {
       </div>
     </div>
       `
+      this.eventSignIn()
   const signUpBtn = document.querySelector(".container .sign-up-btn")
-      signUpBtn.addEventListener('click', () => {
+      signUpBtn.addEventListener('click', (e) => {
+        e.preventDefault()
         formSignInEl.style.display = "none"
         formSignUpEl.style.display = "flex"
         })
-      this.eventSignIn()
+  const goHomeBtnList = document.querySelectorAll(".container .go-home")
+  goHomeBtnList.forEach((homeBtn) => {
+    homeBtn.addEventListener('click', () => {
+      homeHeader.style.display = "block"
+      formSignInEl.style.display = "none"
+      formSignUpEl.style.display = "none"
+  })
+  })
       } else {
         // render blog
-        // render profile (lấy ra name user)
-        this.getProfile(userProfile)
-        // render blog
+        //  profile (lấy ra name user)
           homeHeader.style.display = "none"
-          userProfile.style.display = "flex"
           formSignInEl.style.display = "none"
+          userProfile.style.display = "flex"
+          this.getProfile(userProfile)
           this.getBlog()
-          this.renderBlogs()
-
-          
-
       }
-
-      // hiển thị form sign-up
-    if (this.isSignUp()) {
-        formSignInEl.style.display = "flex"
-        formSignUpEl.style.display = "none"
-    } else {
-        
-    }
-
   }, 
   
   isSignIn: function() {
-    console.log(localStorage.getItem("login_tokens"));
-    if (localStorage.getItem("login_tokens")) {
-      return true
-    } else {
-      return false
-    }
-  },
-  isSignUp: function() {
     if (localStorage.getItem("login_tokens")) {
       return true
     } else {
@@ -144,8 +129,8 @@ const app = {
     if (!response.ok) {
       msg.innerText = "Vui lòng nhập lại email và password"
     } else {
-      console.log("ok");
       localStorage.setItem("login_tokens", JSON.stringify(tokens))
+      alert("Đăng ký thành công")
       this.render()
     }
   },
@@ -237,18 +222,19 @@ const app = {
         // this.handleLogout()
     }
   },
-  // lấy ra 10 blog đầu tiên 
-  getTenBlog: async function() {
-    const {data: blogs} = await client.get("/blogs?offset=0&limit=10")
-  },
-  // Lấy 1 blog theo id
-  getOneBlog: async function(id) {
-    const {data: blogs} = await client.get(`"/blogs/${id}"`)
-  },
+
   // Lấy tất cả blog
   getBlog: async function() {
     const {data: blogs} = await client.get("/blogs")
     this.renderBlogs(blogs.data)
+  },
+  // lấy ra 10 blog đầu tiên 
+  getTenBlog: async function() {
+    const {data} = await client.get("/blogs?offset=0&limit=10")
+  },
+  // Lấy 1 blog theo id
+  getOneBlog: async function(id) {
+    const {data} = await client.get(`"/blogs/:${id}"`)
   },
 
   renderBlogs: function(blogs) {
@@ -287,7 +273,7 @@ const app = {
     this.render()
   },
   eventLogout: function() {
-      const logout = document.querySelector(".profile .logout")
+      const logout = userProfile.querySelector(".sign-out")
       logout.addEventListener("click", (e) => {
           e.preventDefault()
           this.handleLogout()
@@ -297,6 +283,9 @@ const app = {
 
 app.handleSignOut()
 app.render()
+app.eventSignUp()
+app.getBlog()
+
 
 // xử lý create new blogs 
 newBlogBtn.addEventListener('click', function() {
@@ -455,9 +444,6 @@ function createCalendar(elem, year, month) {
 
 })
 
-
-
-// https://www.youtube.com/watch?v=x4sVTr1Pi_0
 
 
 
