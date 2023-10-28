@@ -66,7 +66,7 @@ const app = {
                 <div class="container">
                   <div class="grid gap-1 column-gap-2">
                     <button type="submit" class="p-2 g-col-6 sign-in-btn">Sign in</button>
-                    <button class="p-2 g-col-6 sign-up-btn">Sign up</button>
+                    <button type="button" class="p-2 g-col-6 sign-up-btn">Sign up</button>
                   </div>
                 </div>
               </div>
@@ -119,6 +119,7 @@ const app = {
       } else {
         // nếu thành công lưu token vào storage 
         localStorage.setItem("login_tokens", JSON.stringify(tokens))
+        console.log("sign-in");
         this.render()
     }
   },
@@ -131,6 +132,7 @@ const app = {
       msg.innerText = "Vui lòng nhập lại email và password"
     } else {
       localStorage.setItem("login_tokens", JSON.stringify(tokens))
+      console.log("sign-up");
       alert("Đăng ký thành công")
       this.render()
     }
@@ -227,6 +229,64 @@ const app = {
   // Lấy tất cả blog
   getBlog: async function() {
     const {data: blogs} = await client.get("/blogs")
+    // xử lý content blog 
+    const regex = () => blogs.data.map((blog) => {
+      regexContent(blog.content)
+      function regexContent(content) {
+        const patternContentEnter = /(\n){2,}/g
+        const patternContentWhiteSpace = /(\s){2,}/g
+        const patternTel = /[0|\+84]\d{9}/g
+        const patternEmail = /[a-z0-9-_\.]{3,}[a-z-_\.0-9]+\.[a-z]{2,}/g
+        const patternYoutube = /(https:)\/\/(www)\.(youtube)\.(com)\/(watch)\?(v)\=(.+)/g
+  
+        const telList = content.match(patternTel)
+        const emailList = content.match(patternEmail)
+        const youtubeList = content.match(patternYoutube)
+  
+        let contentFake = document.createElement("div")
+        let checkContent = false
+  
+        content = content.replace(patternContentEnter, "\n")
+        content = content.replace(patternContentWhiteSpace, "\s")
+
+
+        if (telList !== null ) {
+          telList.forEach((tel) => {
+            const a = document.createElement("a")
+            a.innerText = tel
+            contentFake.append(a)
+          })
+          checkContent = true
+        }
+        
+        if (emailList !== null ) {
+          emailList.forEach((email) => {
+            const a = document.createElement('a')
+            a.href = `"${email}"`
+            contentFake.append(a)
+          })
+          checkContent = true
+        }
+        
+        if (youtubeList !== null ) {
+          youtubeList.forEach((youtube) => {
+            const iframe = document.createElement("iframe")
+            iframe.width = 420
+            iframe.height = 315
+            iframe.src = `"${youtube}"`
+            contentFake.append(iframe)
+          })
+          checkContent = true
+        }
+        if (checkContent) {
+          blog.content = contentFake
+          console.log(contentFake);
+        }
+        
+        return blog.content
+      }
+    })
+    regex()
     this.renderBlogs(blogs.data)
   },
   // lấy ra 10 blog đầu tiên 
@@ -234,7 +294,7 @@ const app = {
     const {data} = await client.get("/blogs?offset=0&limit=10")
   },
   // Lấy 1 blog theo id
-  getOneBlog: async function(id) {
+  getBlogId: async function(id) {
     const {data} = await client.get(`"/blogs/:${id}"`)
   },
 
@@ -256,7 +316,7 @@ const app = {
                   <div class="col-9">
                     <span><a href="">Bài viết số ${index + 1}</a></span>
                     <p>${blog.title}</p>
-                    <p>${blog.content}</p>
+                    ${blog.content}
                     <button># view more test...</button>
                     <button># ${blog.userId.name}</button>
                     <hr />
@@ -392,12 +452,12 @@ function createCalendar(elem, year, month) {
       countDownPost.innerHTML = "EXPIRED";
       const result = regexContent(content)
       postNew(result)
-      postNew = async function(result) {
-        const {data , response} = await client.post("/blogs", result)
-        if (response.ok) {
-          app.render()
-        }
-      }
+      // postNew = async function(result) {
+      //   const {data , response} = await client.post("/blogs", result)
+      //   if (response.ok) {
+      //     app.render()
+      //   }
+      // }
       }
     }, 1000);
     })
@@ -407,40 +467,6 @@ function createCalendar(elem, year, month) {
     if (day == 0) {
       day = 7}; 
     return day - 1;
-  }
-  // xử lý content của bài post mới 
-  function regexContent(content) {
-    const patternContentEnter = /(\n){2,}/g
-    const patternContentWhiteSpace = /(\s){2,}/g
-    const patternTel = /[0|\+84]\d{9}/g
-    const patternEmail = /[a-z0-9-_\.]{3,}[a-z-_\.0-9]+\.[a-z]{2,}/g
-    const patternYoutube = /(https:)\/\/(www)\.(youtube)\.(com)\/(watch)\?(v)\=(.+)/g
-
-    let contentFake = document.createElement("div")
-
-    content = content.replace(patternContentEnter, "\n")
-    content = content.replace(patternContentWhiteSpace, "\s")
-
-    patternTel.forEach((tel) => {
-      const a = document.createElement("a")
-      a.innerText = tel
-      contentFake.append(a)
-    })
-
-    patternEmail.forEach((email) => {
-      const a = document.createElement('a')
-      a.href = `"${email}"`
-      contentFake.append(a)
-    })
-
-    patternYoutube.forEach((youtube) => {
-      const iframe = document.createElement("iframe")
-      iframe.width = 420
-      iframe.height = 315
-      iframe.src = `"${youtube}"`
-      contentFake.append(iframe)
-    })
-    return contentFake
   }
 
 })
