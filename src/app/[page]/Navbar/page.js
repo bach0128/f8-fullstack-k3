@@ -1,3 +1,3 @@
-export default function Navbar({ children }) {
-  return <div>{children}</div>;
+export default function Navbar() {
+  return <div></div>;
 }

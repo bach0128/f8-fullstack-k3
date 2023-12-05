@@ -1,5 +1,3 @@
-import React from "react";
-
-export default function page({ children }) {
-  return <div>{children}</div>;
+export default function page() {
+  return <div></div>;
 }
