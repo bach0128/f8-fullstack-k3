@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ params: { lang } }) {
   return (
-    <html lang={lang}>
+    <html lang={params}>
       <body>
         <Providers>
           <Navbar />
