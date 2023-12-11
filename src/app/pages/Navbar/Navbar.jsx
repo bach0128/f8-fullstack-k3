@@ -6,7 +6,7 @@ import youtube from "..//assets/image/youtube.png";
 import f8 from "../assets/image/f8_icon.png";
 
 import "../assets/css/navbar.css";
-import Language from "./Lang/language";
+import Language from "./Lang/Language";
 import Theme from "../../components/Theme";
 import { useRouter } from "next/navigation";
 
