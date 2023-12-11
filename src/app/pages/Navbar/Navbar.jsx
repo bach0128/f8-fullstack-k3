@@ -1,5 +1,5 @@
+"use client";
 import "bootstrap/dist/css/bootstrap.css";
-import Link from "next/link";
 import Image from "next/image";
 import facebook from "../assets/image/facebook.png";
 import youtube from "..//assets/image/youtube.png";
@@ -8,18 +8,33 @@ import f8 from "../assets/image/f8_icon.png";
 import "../assets/css/navbar.css";
 import Language from "./Lang/language";
 import Theme from "../../components/Theme";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
+
   return (
-    <div className="wrap">
-      <nav className="navbar d-flex">
+    <div className="wrap w-full top-0 fixed">
+      <nav className="navbar d-flex ">
         <ul className="nav-left d-flex">
           <a href="/">
             <p className="source">Fullstack.edu.vn F8</p>
           </a>
-          <Link href={"/"} className="go-home">
+          <a href="/" className="go-home">
             Home
-          </Link>
+          </a>
+          <button
+            className="d-block text-xl mx-2 text-orange-600 text-center"
+            onClick={() => router.push("/pages")}
+          >
+            Blogs
+          </button>
+          <button
+            className="d-block text-xl mx-2 text-orange-600 text-center font-bold"
+            onClick={() => router.push("/auths")}
+          >
+            Contact
+          </button>
         </ul>
         <ul className="nav-right d-flex">
           <li className="gap-2 d-flex items-center">

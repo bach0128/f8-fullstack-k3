@@ -1,21 +1,27 @@
-import Providers from "./Providers";
+import ProvidersTheme from "./Providers";
 import "../app/globals.css";
-import Home from "./[page]/Home/Home";
-import Navbar from "./[page]/Navbar/Navbar";
+import Navbar from "./pages/Navbar/Navbar";
+import Auth from "../app/auths/Auth";
+import SessionProvider from "./components/SessionProvider";
+
+// import { getServerSession as getServerSession } from "next-auth";
 
 export const metadata = {
   title: "Create Portfolio",
   description: "Day48-btvn-fullstack-f8",
 };
 
-export default function RootLayout({ params: { lang } }) {
+export default async function RootLayout({ params: { lang }, children }) {
+  // const session = await getServerSession();
   return (
-    <html lang="vi">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>
-          <Navbar />
-          <Home />
-        </Providers>
+        <ProvidersTheme>
+          <main>
+            <Navbar />
+            {children}
+          </main>
+        </ProvidersTheme>
       </body>
     </html>
   );

@@ -1,3 +1,9 @@
-export default function page({ children }) {
-  return <div>{children}</div>;
+// import { getServerSession } from "next-auth";
+
+export default function page() {
+  return (
+    <>
+      <div>Home page</div>
+    </>
+  );
 }

@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import sun from "../[page]/assets/image/sun.png";
-import moon from "../../app/[page]/assets/image/moon.png";
+import sun from "../pages/assets/image/sun.png";
+import moon from "../../app/pages/assets/image/moon.png";
 import Image from "next/image";
-
+import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 
 export default function Theme() {
@@ -22,20 +22,20 @@ export default function Theme() {
   if (!mounted) return null;
 
   return (
-    <button className="theme" onClick={handleTheme}>
+    <Button className="theme" onClick={handleTheme}>
       {theme === "dark" ? (
         <Image
-          alt="none"
+          alt="image"
           src={sun}
           style={{ maxWidth: "24px", height: "auto" }}
         />
       ) : (
         <Image
-          alt="none"
+          alt="image"
           src={moon}
-          style={{ maxWidth: "24px", height: "auto" }}
+          style={{ maxWidth: "24px", height: "auto", color: "orange" }}
         />
       )}
-    </button>
+    </Button>
   );
 }

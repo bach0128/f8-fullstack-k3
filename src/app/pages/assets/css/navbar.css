@@ -53,7 +53,7 @@ li {
 }
 
 .wrap {
-    position: relative;
+    position: fixed;
 }
 
 .navbar {
